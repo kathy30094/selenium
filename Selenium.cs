@@ -1,21 +1,15 @@
 ﻿using System;
 using OpenQA.Selenium;
-using OpenQA.Selenium.Chrome;
-using NUnit.Framework;
-using System.IO;
-using System.Collections;
 using OpenQA.Selenium.Support.UI;
 using System.Threading;
-using System.Collections.ObjectModel;
-namespace seleniumTest1
-{
+
     class Selenium
     {
         public static void switchWindow(IWebDriver driver)
         {
             Thread.Sleep(3000);
             var handles = driver.WindowHandles;
-            //尋覽至最後一個
+            //尋覽切換至最後一個
             foreach (var handle in handles)
             {
                 driver.SwitchTo().Window(handle);
@@ -94,5 +88,5 @@ namespace seleniumTest1
                 menuTerminal.Click();
             }
         }//Id, XPath, ClassName, LinkText, Name
-    }
+    
 }
